@@ -1,7 +1,6 @@
 import streamlit as st
 from langchain.chains import create_history_aware_retriever, create_retrieval_chain
 from langchain.chains.combine_documents import create_stuff_documents_chain
-from langchain_chroma import Chroma
 from langchain_community.chat_message_histories import ChatMessageHistory
 from langchain_core.chat_history import BaseChatMessageHistory
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
@@ -10,6 +9,8 @@ from langchain_core.runnables.history import RunnableWithMessageHistory
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.document_loaders import PyPDFLoader
+from chromadb.config import Settings
+from langchain_chroma import Chroma
 import os
 from dotenv import load_dotenv
 
@@ -58,7 +59,13 @@ if api_key:
         # Split and embed documents
         text_splitter = RecursiveCharacterTextSplitter(chunk_size=5000, chunk_overlap=500)
         splits = text_splitter.split_documents(documents)
-        vectorstore = Chroma.from_documents(documents=splits, embedding=embeddings)
+
+        # Use in-memory Chroma storage
+        vectorstore = Chroma.from_documents(
+            documents=splits,
+            embedding=embeddings,
+            settings=Settings(chroma_db_impl="duckdb+memory")
+        )
         retriever = vectorstore.as_retriever()
 
         # Contextualized question prompt
@@ -115,6 +122,7 @@ if api_key:
                 st.write(f"{role} {message.content}")
 else:
     st.warning("Please enter the Groq API Key")
+
 
 
 
