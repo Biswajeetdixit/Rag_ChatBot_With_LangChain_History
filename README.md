@@ -12,7 +12,15 @@ Here’s what this project offers:
 - **🧩 Context-Aware Retrieval**: The system uses **LangChain** to handle historical chat context effectively.  
 - **🤖 AI-Powered Conversations**: Ask questions about the uploaded documents, and get concise, accurate answers.  
 - **🔄 Persistent Chat History**: Maintains a clean and interactive chat experience.  
-- **🛠️ Modular Design**: Flexible and extensible architecture for future updates.  
+- **🛠️ Modular Design**: Flexible and extensible architecture for future updates.
+
+- ## 🧠 Chat History and Memory in the Project
+
+### What is Chat History? 🗨️  
+Chat history refers to the record of interactions between the user and the assistant. In this project, it ensures the assistant can maintain the **context** of the conversation, making responses more relevant and natural.  
+
+For example:
+
 
 ---
 
@@ -27,6 +35,58 @@ Here’s what this project offers:
 3. **Chat Session with RAG Assistant**  
    ![Chat Screenshot](#)  
 
+Here, the assistant uses chat history to understand "What about tomorrow?" without needing extra details from the user.
+
+---
+
+### How Memory Works in This Project 🧠  
+Memory allows the assistant to recall previous interactions during the current session. It is **stateful**, meaning it tracks the conversation context throughout the session.  
+
+#### Key Features:
+- **Context-Aware Responses**:  
+  The assistant remembers prior messages to provide meaningful and relevant answers.  
+- **Session-Based Memory**:  
+  Chat history is stored temporarily using `st.session_state` during each session.  
+- **History in Retrieval-Augmented Generation (RAG)**:  
+  - **Why?** To improve question-answering by using the chat's context and relevant document knowledge.  
+  - **How?** The `RunnableWithMessageHistory` in LangChain enriches the user's query with past messages before retrieving or generating responses.
+
+---
+
+### Benefits of Chat History and Memory in the Project 🌟  
+1. **Improved Contextuality**:  
+   Enables the assistant to respond based on the flow of the conversation.
+2. **Personalization**:  
+   Makes interactions feel more natural and personalized for the user.
+3. **Enhanced Efficiency**:  
+   Avoids repetitive questions by "remembering" what was already discussed.
+
+---
+
+### Technical Implementation  
+- **Chat History**:  
+  Managed using LangChain's `ChatMessageHistory`, which organizes the conversation as a sequence of **user** and **assistant** messages.  
+- **Memory Integration**:  
+  Implemented using `RunnableWithMessageHistory`, which connects the RAG pipeline with the conversation history for contextualized question answering.  
+
+#### Example Code:
+```python
+def get_session_history(session: str) -> BaseChatMessageHistory:
+    # Initialize chat history if not available
+    if session_id not in st.session_state.store:
+        st.session_state.store[session_id] = ChatMessageHistory()
+    return st.session_state.store[session_id]
+
+# Attach chat history to the RAG chain
+conversational_rag_chain = RunnableWithMessageHistory(
+    rag_chain,
+    get_session_history,
+    input_messages_key="input",
+    history_messages_key="chat_history",
+    output_messages_key="answer"
+)
+## **Why It Matters**🔑
+Incorporating chat history and memory allows the assistant to handle complex, multi-turn conversations, enhancing the user experience and making the interactions more human-like.
 ---
 
 ## 📂 **Project Structure**  
