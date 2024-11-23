@@ -33,7 +33,9 @@ For example:
 2. **PDF Upload Interface**  
    ![PDF Upload Interface Screenshot](#)  
 3. **Chat Session with RAG Assistant**  
-   ![Chat Screenshot](#)  
+   ![Demo Image](![Demo Image](./images/demo_image.png)
+)
+
 
 Here, the assistant uses chat history to understand "What about tomorrow?" without needing extra details from the user.
 
