@@ -52,6 +52,8 @@ Follow these steps to get started:
 Here’s what’s planned for future releases:
 
 - **📊` Improved Analytics`**: Add data visualization for insights into document contents.
+
+  
 -**🌐 Multi-Language Support**: Enable conversations in multiple languages.
 -**🔐 Enhanced Security**: Add authentication for user sessions.
 -**⚡ Performance Optimizat**ion: Enhance processing speed for large documents.
