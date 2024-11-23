@@ -62,5 +62,12 @@ Here’s what’s planned for future releases:
 
 - **⚡` Performance Optimization`**: Enhance processing speed for large documents.
 
+## 🌟 About the Developer
+
+This project is proudly built and maintained by **Biswajeet Dixit** 🧑‍💻.  
+As a passionate learner and aspiring Generative AI engineer, I handled every aspect of this project, from ideation to deployment. Feel free to connect with me on LinkedIn or GitHub for any feedback or collaboration opportunities!
+
+🔗 [LinkedIn Profile](https://www.linkedin.com/in/your-profile-link/)  
+🔗 [GitHub Profile](https://github.com/your-profile-link/)  
 
 
