@@ -57,10 +57,10 @@ Here’s what’s planned for future releases:
 - **🌐 `Multi-Language Support`**: Enable conversations in multiple languages.
 
 
-- **🔐` Enhanced Security `**: Add authentication for user sessions.
+- **🔐 ` Enhanced Security `**: Add authentication for user sessions.
 
 
-- **⚡` Performance Optimizat `**ion: Enhance processing speed for large documents.
+- **⚡` Performance Optimization`**: Enhance processing speed for large documents.
 
 
 
