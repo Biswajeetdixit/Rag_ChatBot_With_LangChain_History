@@ -33,7 +33,7 @@ For example:
 2. **PDF Upload Interface**  
    ![PDF Upload Interface Screenshot](#)  
 3. **Chat Session with RAG Assistant**  
-   ![Demo Image](![Demo Image](./images/demo_image.png)
+   (![Demo Image](https://github.com/Biswajeetdixit/Rag_ChatBot_With_LangChain_History/blob/5b1a01e7a9a6617a08642ec8d361eb119c3288b6/Video_or_Images/RAG_Chat_History.png)
 )
 
 
