@@ -34,7 +34,7 @@ For example:
 2. **Groq API Interface**  
    ![Description of the Image](https://github.com/Biswajeetdixit/Rag_ChatBot_With_LangChain_History/blob/f92afc67163183b0417acfeec3859df30fb41f56/Video_or_Images/Rag_After_Groq_API.png)
 3.**First Question**
-   ![Description of the Image](https://github.com/Biswajeetdixit/Rag_ChatBot_With_LangChain_History/blob/f92afc67163183b0417acfeec3859df30fb41f56/Video_or_Images/Rag_After_Groq_API.png)
+   ![Description of the Image](https://github.com/Biswajeetdixit/Rag_ChatBot_With_LangChain_History/blob/ad670e026194aadcdb34a638bced8d5e8ef22555/Video_or_Images/Rag_ML_question.png)
    
 4. **Chat Session with RAG Assistant**  
    (![Demo Image](https://github.com/Biswajeetdixit/Rag_ChatBot_With_LangChain_History/blob/5b1a01e7a9a6617a08642ec8d361eb119c3288b6/Video_or_Images/RAG_Chat_History.png)
