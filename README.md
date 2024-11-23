@@ -29,7 +29,8 @@ For example:
 🎥 **Video Demo**: [Link to Demo](#)  
 📸 **Screenshots**:  
 1. **Home Page**  
-   ![Home Page Screenshot](#)  
+  ![Description of the Image](https://github.com/Biswajeetdixit/Rag_ChatBot_With_LangChain_History/blob/81eb7996cadc083eacf314340a9549e51dff13d2/Video_or_Images/RAG_First_interface.png)
+ 
 2. **PDF Upload Interface**  
    ![PDF Upload Interface Screenshot](#)  
 3. **Chat Session with RAG Assistant**  
