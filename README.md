@@ -113,9 +113,7 @@ Incorporating chat history and memory allows the assistant to handle complex, mu
 Follow these steps to get started:  
 1. **Clone the Repository** 🛠️:  
    ```bash
-   git clone https://github.com/your-repo/conversational-rag.git
-   cd conversational-rag
-
+   git clone https://github.com/Biswajeetdixit/Rag_ChatBot_With_LangChain_History
 
 
 ## 🎯 **Future Improvements**
